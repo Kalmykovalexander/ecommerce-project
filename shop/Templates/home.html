@@ -1,10 +1,48 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Home</title>
-</head>
-<body>
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+  Home
+{% endblock %}
 
-</body>
-</html>
+{% block content %}
+  <div class="container-fluid">
+    <div class="row">
+      <img id="homeimage" class="img-fluid" src="{% static 'images/homepage.jpg' %}">
+    </div>
+  </div>
+
+  <div class="py-4">
+    <div class="container">
+        <div class="row">
+          <div class="col-10 mx-auto my-2 text-center">
+            <h1 class="text-capitalize fw-bold">
+              Our products
+            </h1>
+          </div>
+        </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      {% for i in 'aaaaaaaa' %}
+        <div class="col-9 mx-auto col-md-6 col-lg-3">
+          <div class="card mb-5">
+            <div class="p-4">
+              <img class="card-img-top" src="{% static 'images/cardimage.jpg' %}">
+            </div>
+            <div class="card-footer d-flex justify-content-between" style="background: transparent; border-color: transparent;">
+              <p class="fw-bold mb-0">
+                Cat
+              </p>
+              <h5 class="text-info font-italic mb-0">
+                $9.99
+              </h5>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+
+{% endblock%}
