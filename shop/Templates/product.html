@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+  Product
+{% endblock %}
+
+{% block content %}
+  <div class="container py-5">
+    <div class="row mt-5">
+      <div class="col-10 mx-auto col-md-6 my-3">
+        <img class="card-img-top" src="{% static 'images/cardimage.jpg' %}">
+      </div>
+    </div>
+  </div>
+  <div class="col-10 mx-auto col-md-6 my-3">
+    <div>
+      <h1 class="product_title">Just a cat</h1>
+      <h5 class="text-info font-italic mb-4">
+        $9.99
+      </h5>
+      <p class="product_desc">Product description</p>
+      <p class="text-justify product_text">Kitttttyyyyyy!!!</p>
+      <p class="text-justify product_text">Out of Store</p>
+    </div>
+  </div>
+{% endblock%}
