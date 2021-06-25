@@ -17,6 +17,16 @@
       <li class="nav-item"><a class="nav-link text-uppercase fw-bold px-3" href="">Contacts</a></li>
       <li class="nav-item"><a class="nav-link text-uppercase fw-bold px-3" href="">About</a></li>
     </ul>
+    <div>
+      <a href="{% url 'cart_detail' %}" style="text-decoration: none">
+        <button type="button" class="btn">
+          <span class="material-icons">shopping_cart</span>
+          {% if item_count > 0 %}
+          <span class="badge bg-secondary">{{ item_count }}</span>
+          {% endif %}
+        </button>
+      </a>
+    </div>
 
     <form class="form-inline px-3">
       <div class="input-group">
