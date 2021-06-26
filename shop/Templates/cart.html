@@ -58,21 +58,21 @@
               <span class="material-icons cart-icon">add_circle_outline</span>
             </a>
             <br>
-            <a href="">
+            <a href="{% url 'cart_remove' cart_item.product_id %}">
               <span class="material-icons cart-icon">remove_circle_outline</span>
             </a>
             <br>
-            <a href="">
+            <a href="{% url 'cart_remove_product' cart_item.product_id %}">
               <span class="material-icons cart-icon">delete</span>
             </a>
           </td>
           {% else %}
           <td>
-            <a href="">
+            <a href="{% url 'cart_remove' cart_item.product_id %}">
               <span class="material-icons cart-icon">remove_circle_outline</span>
             </a>
             <br>
-            <a href="">
+            <a href="{% url 'cart_remove_product' cart_item.product_id %}">
               <span class="material-icons cart-icon">delete</span>
             </a>
           </td>

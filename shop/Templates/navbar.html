@@ -19,7 +19,7 @@
     </ul>
     <div>
       <a href="{% url 'cart_detail' %}" style="text-decoration: none">
-        <button type="button" class="btn">
+        <button type="button" class="btn p-3 m-3" style="border-color: lightgrey">
           <span class="material-icons">shopping_cart</span>
           {% if item_count > 0 %}
           <span class="badge bg-secondary">{{ item_count }}</span>
